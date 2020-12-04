@@ -29,6 +29,10 @@ namespace ProductApp
                        options.UseSqlServer(Configuration.GetConnectionString("ProductDb")));
             services.AddControllersWithViews();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddPageRoute("/Views/Product/Index", "");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

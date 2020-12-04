@@ -1,13 +1,3 @@
-﻿@model IEnumerable<ProductApp.Models.Product>
-
-@{
-    ViewBag.Title = "Products";
-}
-
-<div class="home-button">
-    <a asp-page="/Views/Product/Index">
-        <div>
-            Lista produkata iz baze
-        </div>
-    </a>
+﻿<div>
+   <input type="submit" onclick="location.href='@Url.Action("Index", "Product")'" value="Klikni ovde kako bi video listu produkta iz baze" />
 </div>
