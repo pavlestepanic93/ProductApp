@@ -17,7 +17,7 @@ namespace ProductApp.Models
 
         public IEnumerable<Product> GetAllProducts()
         {
-            return _appDbContext.Products;
+            return _appDbContext.Products.ToList();
         }
     }
 }

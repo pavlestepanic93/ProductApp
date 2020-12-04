@@ -3,13 +3,11 @@
 @{
     ViewBag.Title = "Products";
 }
-<h1>Products</h1>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProizvodId)
-        </th>
-        <th>
-
-        </th>
+<div class="home-button">
+    <a asp-page="/Views/Product/Index">
+        <div>
+            Lista produkata iz baze
+        </div>
+    </a>
+</div>
