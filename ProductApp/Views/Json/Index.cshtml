@@ -1,9 +1,8 @@
-﻿@model IEnumerable<ProductApp.Models.Product>
+﻿@model ProductApp.Models.Product
 
 @{
     ViewData["Title"] = "Index";
 }
-
 
 <table class="table">
     <thead>
@@ -30,30 +29,26 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Naziv)
+               @Model.Naziv;
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Opis)
+                @Model.Opis;
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Kategorija)
+                @Model.Kategorija;
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Proizvodjac)
+                @Model.Proizvodjac;
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Dobavljac)
+                @Model.Dobavljac;
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cena)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProizvodId" class="btn btn-primary">Edit</a> 
+                @Model.Cena;
             </td>
         </tr>
-}
+
     </tbody>
 </table>
